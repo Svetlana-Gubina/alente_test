@@ -1,0 +1,13 @@
+.social-list {
+  @include indent();
+  @include list();
+  @include flex();
+}
+
+.social-item {
+  @include indent();
+}
+
+.social-link {
+  display: block;
+}

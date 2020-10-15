@@ -1,0 +1,11 @@
+.presentation {
+  @include indent();
+  width: 100%;
+  max-width: 100%;
+  min-height: 446px;
+
+  background-image: url("../../img/2-layers.png"), url("../../img/br-presentation.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: content, cover;
+  background-position: 60% 0, 0 0;
+}

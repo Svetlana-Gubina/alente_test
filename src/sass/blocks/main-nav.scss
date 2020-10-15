@@ -1,0 +1,36 @@
+.main-nav {
+  @include indent();
+}
+
+.main-nav__list {
+  @include indent();
+  @include list();
+  @include flex();
+  justify-content: space-between;
+}
+
+.main-nav__item {
+  @include indent();
+}
+
+.main-nav__link {
+  color: #ffffff;
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  // letter-spacing: 1.8px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

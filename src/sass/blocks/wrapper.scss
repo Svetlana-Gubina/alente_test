@@ -1,11 +1,21 @@
 .wrapper {
   width: 100%;
   min-width: $mobile-width;
+  max-width: $desktop-width;
   height: auto;
-  @include indent();
 
-  @include media-tablet {
-    // width: 500px;
-  }
+  @include flex();
+  @include indent();
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrapper--inner {
+  outline: 2px dashed darkred;
+
+  @include indent();
+  width: 50.47%;
+  margin-right: auto;
+  margin-left: auto;
 }
 

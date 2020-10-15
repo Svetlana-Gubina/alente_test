@@ -1,0 +1,74 @@
+.page-header {
+  @include indent();
+  width: 100%;
+  max-width: 100%;
+}
+
+.page-header__container {
+  @include indent();
+  width: 100%;
+  max-width: 100%;
+}
+
+.page-header__container--bottom {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.page-header__container .wrapper--inner {
+  @include flex();
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo {
+  font-size: 18px;
+  max-width: 130px;
+}
+
+.page-header__tel {
+  @include indent();
+}
+
+.page-header__tel a {
+  color: #1f1f1f;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.page-header__user-nav-list {
+  @include indent();
+  @include list();
+  @include flex();
+}
+
+.page-header__user-nav-item {
+  @include indent();
+}
+
+.page-header__user-nav-link {
+  display: block;
+  padding: 0.5em;
+  color: #1f1f1f;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

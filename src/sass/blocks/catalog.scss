@@ -1,0 +1,12 @@
+.catalog {
+  @include indent();
+  width: 100%;
+  max-width: 100%;
+}
+
+.catalog__list,
+.catalog__promo-list {
+  @include indent();
+  @include list();
+  @include flex();
+}

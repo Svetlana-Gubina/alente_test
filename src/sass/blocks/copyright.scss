@@ -1,0 +1,19 @@
+.copyright {
+  @include indent();
+  padding: 1%;
+  width: 100%;
+  max-width: 100%;
+
+  background-color: rgba(1, 1, 1, 0.2);
+}
+
+.copyright__text {
+  @include indent();
+  padding: 0.5em;
+  color: #828181;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+
+  // letter-spacing: 1.2px;
+}
