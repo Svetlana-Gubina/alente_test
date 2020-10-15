@@ -208,7 +208,7 @@ exports.watch = watch;
 // Start, build
 
 const dev = gulp.series(
-  gulp.parallel(html, styles, normalize, scripts, images, toWebp, copy),
+  gulp.parallel(copy, svgSprite, styles, normalize, images, toWebp, html),
   gulp.parallel(watch, server)
 );
 

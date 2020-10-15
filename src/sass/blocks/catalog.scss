@@ -10,3 +10,119 @@
   @include list();
   @include flex();
 }
+
+.catalog__list {
+  justify-content: space-between;
+  padding: 2% 0;
+}
+
+.catalog__item,
+.catalog__promo-item {
+  @include indent();
+}
+
+.catalog__link {
+  display: block;
+  padding: 0.5em;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  // color: #b98348;
+  color: #4b4b4b;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.catalog__link--active {
+  color: #b98348;
+  outline: 2px solid #b98348;
+}
+
+.catalog__promo-list {
+  outline: 3px dashed crimson;
+  justify-content: space-between;
+}
+
+.catalog__promo-item {
+  // min-width: 328px;
+  width: 32%;
+  min-height: 328px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  // flex: auto;
+  // background-color: darkolivegreen;
+}
+
+.catalog__promo-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.catalog__promo-link {
+  width: 100%;
+  height: 100%;
+
+  @include indent();
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: #b98348;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:hover,
+  &:focus {
+    outline: 3px dashed darkblue;
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.catalog__promo-link--1 {
+  background-image: url("../../img/item-1.jpg");
+}
+
+.catalog__promo-link--2 {
+  background-image: url("../../img/item-2.jpg");
+}
+
+.catalog__promo-link--3 {
+  background-image: url("../../img/item-3.jpg");
+}
+
+.catalog__promo-link--4 {
+  background-image: url("../../img/item-4.jpg");
+}
+
+.catalog__promo-link--5 {
+  background-image: url("../../img/drop.png"), url("../../img/item-5.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+.catalog__promo-link--6 {
+  background-image: url("../../img/item-6.jpg");
+}
+
+.catalog__promo-text {
+  @include indent();
+  color: #ffffff;
+}
+
+.catalog__promo-text--bg {
+  background-color: #b98348;
+}

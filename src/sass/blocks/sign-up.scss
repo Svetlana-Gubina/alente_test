@@ -1,5 +1,140 @@
 .sign-up {
   @include indent();
+  padding: 2% 0;
   width: 100%;
   max-width: 100%;
+  background-color: rgba(1, 1, 1, 0.2);
+  background-image: url("../../img/sign-in-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -190px;
+}
+
+.sign-up .wrapper--inner {
+  @include flex();
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+}
+
+.sign-up__title {
+  @include indent();
+  padding: 0.2em;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sign-up__text {
+  position: relative;
+
+  @include indent();
+  padding: 0.5em;
+  margin-bottom: 50px;
+  color: #1f1f1f;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 40%;
+    width: 20%;
+    height: 3px;
+    background-color: #1f1f1f;
+  }
+}
+
+.sign-up__form {
+  @include indent();
+  padding: 3% 13%;
+  width: 100%;
+  max-width: 100%;
+  background-color: #ffffff;
+
+  @include flex();
+
+  & fieldset {
+    @include indent();
+    border: 0;
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  & fieldset:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  & legend,
+  & .sign-up__form-label-sm {
+    @include indent();
+    padding: 0.5em;
+    padding-left: 0;
+    margin-bottom: 10px;
+    color: #1f1f1f;
+    // font-family: Georgia;
+    font-size: 13px;
+    font-style: italic;
+    text-align: left;
+  }
+}
+
+.sign-up__form-btn {
+  width: 100%;
+  max-width: 100%;
+  padding: 1em;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #b98348;
+}
+
+.sign-up__form-input-bg,
+.sign-up__form-input-sm {
+  width: 100%;
+  max-width: 100%;
+
+  @include indent();
+  padding: 0.5em;
+  border: 2px solid #000000;
+  background-color: transparent;
+
+  // color: #b98348;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #b98348;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #b98348;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #b98348;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #b98348;
+}
+
+.sign-up__form-select {
+  color: #b98348;
+}
+
+.sign-up__form-container {
+  outline: 1px dashed crimson;
+
+  @include indent();
+  // padding-top: 10px;
+  width: 50%;
+  display: inline-block;
+  // vertical-align: middle;
 }

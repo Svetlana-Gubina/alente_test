@@ -11,8 +11,6 @@
 }
 
 .wrapper--inner {
-  outline: 2px dashed darkred;
-
   @include indent();
   width: 50.47%;
   margin-right: auto;

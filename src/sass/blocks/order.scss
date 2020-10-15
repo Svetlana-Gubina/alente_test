@@ -4,8 +4,109 @@
   max-width: 100%;
 }
 
+.order__top {
+  @include indent();
+  width: 100%;
+  max-width: 100%;
+  background-image: url("../../img/studio-bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 411px;
+}
+
+.order__top .wrapper--inner {
+  // outline: 3px dashed yellow;
+
+  @include flex();
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 411px;
+}
+
 .order__brands-list {
+  // outline: 2px dashed yellow;
+
   @include indent();
   @include list();
   @include flex();
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.order__slogan {
+  @include indent();
+  padding: 0.2em;
+  margin-bottom: 40px;
+  max-width: 48%;
+  color: #ffffff;
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+
+  /* Text style for "Пошив кост" */
+  // font-family: Georgia;
+  // font-size: 28px;
+  // font-weight: 700;
+
+  & .order__slogan-top {
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+
+  & .order__slogan-center {
+    text-transform: uppercase;
+  }
+
+  & .order__slogan-bottom {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+
+.order__text {
+  position: relative;
+
+  @include indent();
+  padding: 0.5em;
+  color: #ffffff;
+  text-align: center;
+  // font-family: Georgia;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 1px;
+
+  &::after {
+    content: url("../../img/wave.png");
+    width: 80%; // 210px;
+    height: 14px;
+    position: absolute;
+    top: 120%;
+    left: 10%;
+    background-color: transparent;
+  }
+}
+
+.order__bottom {
+  @include indent();
+  width: 100%;
+  max-width: 100%;
+
+  min-height: 154px;
+  background-color: black;
+  background-image: url("../../img/Layer_44.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order__bottom .wrapper--inner {
+  // @include flex();
+  padding-top: 2%;
 }

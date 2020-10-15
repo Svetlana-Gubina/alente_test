@@ -6,8 +6,33 @@
 
 .social-item {
   @include indent();
+  width: 32px;
+  height: 32px;
+
+  @include flex();
+  justify-content: center;
+  align-items: center;
 }
 
 .social-link {
-  display: block;
+  font-size: 0;
+  // outline: 1px dashed red;
+
+  @include flex();
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }

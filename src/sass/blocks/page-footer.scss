@@ -122,3 +122,13 @@
     opacity: 0.8;
   }
 }
+
+.page-footer__social-list .social-item {
+  border: 1px solid #b98348;
+}
+
+.page-footer__social-list .social-link {
+  & svg {
+    fill: #b98348;
+  }
+}

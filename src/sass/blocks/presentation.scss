@@ -2,10 +2,51 @@
   @include indent();
   width: 100%;
   max-width: 100%;
-  min-height: 446px;
+  min-height: 446px; // ??
 
   background-image: url("../../img/2-layers.png"), url("../../img/br-presentation.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: content, cover;
-  background-position: 60% 0, 0 0;
+  background-position: 65% 100%, 0 0;
+}
+
+.presentation .wrapper--inner {
+  @include flex();
+  align-items: center;
+  min-height: 446px; // ??
+}
+
+.presentation__title {
+  position: relative;
+
+  @include indent();
+  padding: 0.2em;
+  max-width: 60%;
+  color: #ffffff;
+  font-size: 48px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 300;
+
+  & span {
+    font-weight: 700;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    top: -7%;
+  }
+
+  &::after {
+    top: 110%;
+  }
 }
