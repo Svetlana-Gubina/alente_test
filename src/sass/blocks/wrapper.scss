@@ -12,8 +12,17 @@
 
 .wrapper--inner {
   @include indent();
-  width: 50.47%;
+  width: 55%;
   margin-right: auto;
   margin-left: auto;
+
+  @include media-custom(1200px) {
+    width: 80%;
+  }
+
+  @include media-tablet {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
