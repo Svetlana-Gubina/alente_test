@@ -3,10 +3,23 @@
 }
 
 .main-nav__list {
+  min-width: 720px;
+
   @include indent();
   @include list();
   @include flex();
   justify-content: space-between;
+  align-items: center;
+
+  @include media-custom(1380px) {
+    min-width: 50%;
+    max-width: 100%;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+  }
+
 }
 
 .main-nav__item {
@@ -16,14 +29,14 @@
 .main-nav__link {
   color: #ffffff;
   display: block;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
-  // letter-spacing: 1.8px;
+  letter-spacing: 1px;
 
   &:hover,
   &:focus {
@@ -33,4 +46,12 @@
   &:active {
     opacity: 0.8;
   }
+}
+
+.main-nav__link:last-of-type {
+  padding-right: 0;
+}
+
+.main-nav__link--active {
+  border-bottom: 1px dashed currentColor;
 }

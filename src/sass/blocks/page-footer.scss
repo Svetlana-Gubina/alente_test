@@ -7,23 +7,80 @@
 }
 
 .page-footer .wrapper--inner {
+  position: relative;
+
   @include flex();
   justify-content: space-between;
-  padding: 2.5% 5%;
+  padding: 2.3%;
+  padding-left: 4%;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 1px;
+    height: 100%;
+    background-color: #c2c2c2;
+  }
+
+  &::after {
+    left: 25%;
+  }
+
+  &::before {
+    left: 70%;
+  }
+
+  width: 58%;
+
+  @include media-custom(1800px) {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  @include media-custom(1380px) {
+    width: 80%;
+  }
+
+  @include media-tablet {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 .page-footer__nav,
 .page-footer__catalog,
 .page-footer__contacts {
-  outline: 1px dashed royalblue;
-
   @include indent();
 }
 
+.page-footer__nav {
+  margin-right: 130px;
+
+  @include media-tablet {
+    margin-right: 0;
+  }
+
+}
+
+.page-footer__contacts {
+  margin-left: 100px;
+
+  @include media-tablet {
+    margin-left: 0;
+  }
+}
+
 .page-footer__catalog {
-  // max-width: 35%;
-  // min-width: 40%;
-  // flex: auto;
+  padding-left: 10px;
+  flex: auto;
 }
 
 .page-footer__nav-list,
@@ -35,8 +92,17 @@
 }
 
 .page-footer__catalog-list {
-  // flex-direction: row;
-  // align-content: center;
+  max-height: 160px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  @include media-tablet {
+    max-height: 100%;
+    align-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 .page-footer__nav-item,
@@ -46,9 +112,13 @@
 
 .page-footer__nav-link,
 .page-footer__catalog-link {
+  font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
   display: block;
-  padding: 0.5em;
   text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 0.3em;
 
   &:hover,
   &:focus {
@@ -67,13 +137,17 @@
 
 .page-footer__catalog-link {
   color: #1f1f1f;
+  padding: 0.25em;
 }
 
 .page-footer__contacts-title {
-  font-size: 18px;
   text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
 
   @include indent();
+  margin-bottom: 5px;
   padding: 0.2em 0;
 }
 
@@ -82,15 +156,16 @@
   @include flex();
   flex-direction: column;
 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .page-footer__contacts-paragraph {
   @include indent();
   @include flex();
-  padding: 0.5em;
+  padding: 0.2em;
   color: #1f1f1f;
-  letter-spacing: 1px;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
 .page-footer__contacts-tel a {

@@ -92,6 +92,15 @@
   align-items: center;
 }
 
+.page-header__container--bottom .wrapper--inner {
+  padding-left: 50px;
+
+  @include media-custom(900px) {
+    padding: 10px;
+    justify-content: center;
+  }
+}
+
 .page-header__logo {
   font-size: 18px;
   max-width: 130px;

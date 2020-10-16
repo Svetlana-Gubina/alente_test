@@ -2,6 +2,7 @@
   @include indent();
   width: 100%;
   max-width: 100%;
+  margin-bottom: 5px;
 }
 
 .catalog__list,
@@ -11,9 +12,48 @@
   @include flex();
 }
 
+.catalog .wrapper--inner {
+  width: 58%;
+
+  @include media-custom(1380px) {
+    width: 80%;
+  }
+
+  @include media-tablet {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .catalog__list {
   justify-content: space-between;
-  padding: 2% 0;
+  padding: 3.8% 0;
+  padding-bottom: 3%;
+  padding-left: 60px;
+
+  @include media-custom(900px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.catalog__promo-list {
+  padding-left: 60px;
+  justify-content: space-between;
+
+  @include media-custom(900px) {
+    padding-left: 0;
+  }
+
+  @include media-custom(850px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .catalog__item,
@@ -23,12 +63,11 @@
 
 .catalog__link {
   display: block;
-  padding: 0.5em;
+  padding: 0.7em 1em;
   font-size: 14px;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  // color: #b98348;
   color: #4b4b4b;
   text-decoration: none;
 
@@ -42,24 +81,22 @@
   }
 }
 
+
 .catalog__link--active {
   color: #b98348;
   outline: 2px solid #b98348;
 }
 
-.catalog__promo-list {
-  outline: 3px dashed crimson;
-  justify-content: space-between;
-}
 
 .catalog__promo-item {
-  // min-width: 328px;
+  min-width: 328px;
   width: 32%;
   min-height: 328px;
   margin-bottom: 10px;
-  margin-right: 10px;
-  // flex: auto;
-  // background-color: darkolivegreen;
+
+  @include media-custom(850px) {
+    margin-bottom: 20px;
+  }
 }
 
 .catalog__promo-item:nth-child(3n) {
@@ -69,9 +106,10 @@
 .catalog__promo-link {
   width: 100%;
   height: 100%;
+  min-height: 328px;
 
   @include indent();
-  padding: 2em;
+  padding: 1.8em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +121,6 @@
 
   &:hover,
   &:focus {
-    outline: 3px dashed darkblue;
     opacity: 0.5;
   }
 
@@ -94,35 +131,133 @@
 
 .catalog__promo-link--1 {
   background-image: url("../../img/item-1.jpg");
+  padding: 0.5em;
+
+  & .catalog__promo-text {
+    margin-top: 55px;
+  }
 }
 
 .catalog__promo-link--2 {
   background-image: url("../../img/item-2.jpg");
+
+  & .catalog__promo-text {
+    margin-top: 55px;
+  }
 }
 
 .catalog__promo-link--3 {
   background-image: url("../../img/item-3.jpg");
+
+  & .catalog__promo-text {
+    margin-top: 50px;
+  }
 }
 
 .catalog__promo-link--4 {
   background-image: url("../../img/item-4.jpg");
+
+  & .catalog__promo-text {
+    margin-top: 45px;
+  }
+
+  & .catalog__promo-text h3 {
+    margin-bottom: 15px;
+  }
+
+  & .catalog__promo-text-brand {
+    max-width: 50%;
+  }
+
+  & .catalog__promo-text-sm {
+    font-size: 14px;
+    padding: 1em;
+    border: 1px solid #ffffff;
+  }
 }
 
 .catalog__promo-link--5 {
   background-image: url("../../img/drop.png"), url("../../img/item-5.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
+
+  & .catalog__promo-text {
+    // margin-top: -10px;
+  }
+
+  & .catalog__promo-text h3 {
+    margin-bottom: 8px;
+  }
 }
 
 .catalog__promo-link--6 {
+  outline: 2px dashed rebeccapurple;
   background-image: url("../../img/item-6.jpg");
+
+  & .catalog__promo-text h3 {
+    margin-top: -30px;
+  }
 }
 
 .catalog__promo-text {
   @include indent();
+  @include flex();
+  flex-direction: column;
+  align-items: center;
   color: #ffffff;
+  text-align: center;
+}
+
+.catalog__promo-text h3 {
+  @include indent();
+  padding: 0.2em;
+
+  @include flex();
+  flex-direction: column;
+  align-items: center;
 }
 
 .catalog__promo-text--bg {
+  padding: 5px 10px;
   background-color: #b98348;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.catalog__promo-bold-text {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.catalog__promo-text-brand {
+  @include indent();
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.55px;
+  line-height: normal;
+}
+
+.catalog__promo-text-sm {
+  @include indent();
+  padding: 0.5em;
+  font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.6px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.catalog__promo-text-Tateossian {
+  max-width: 75%;
 }

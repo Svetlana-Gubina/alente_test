@@ -1,3 +1,36 @@
 .logo {
+  min-width: 190px;
+
   @include indent();
+  padding: 5px;
+
+  @include flex();
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-custom(1380px) {
+    margin-bottom: 20px;
+  }
+}
+
+.logo__img {
+  @include indent();
+  width: 51px;
+  height: 38px;
+}
+
+.logo__text {
+  @include indent();
+  @include flex();
+  flex-direction: column;
+
+  font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 300;
+}
+
+.logo__span {
+  font-size: 12px;
 }
