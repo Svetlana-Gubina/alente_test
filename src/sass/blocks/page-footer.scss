@@ -48,6 +48,8 @@
   @include media-tablet {
     width: 100%;
     max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     flex-direction: column;
     align-items: center;
   }
@@ -58,6 +60,10 @@
 .page-footer__catalog,
 .page-footer__contacts {
   @include indent();
+
+  @include media-custom(900px) {
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -68,6 +74,11 @@
 .page-footer__catalog {
   padding-left: 30px;
   width: 35%;
+
+  @include media-tablet {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .page-footer__nav-list,

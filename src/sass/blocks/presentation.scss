@@ -76,11 +76,13 @@
   }
 
   @include media-custom(900px) {
+    font-size: 36px;
     margin-left: 0;
     width: 80%;
     background-color: #b98348;
 
-    &::before {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -89,5 +91,10 @@
     width: 100%;
     max-width: 100%;
     font-size: 36px;
+  }
+
+  @include media-mobile {
+    font-size: 25px;
+    line-height: 1.5;
   }
 }

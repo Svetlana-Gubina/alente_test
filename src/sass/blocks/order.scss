@@ -23,6 +23,12 @@
   align-items: center;
 
   min-height: 411px;
+
+  @include media-tablet {
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .order__brands-list {
@@ -33,6 +39,8 @@
   align-items: center;
 
   @include media-custom(900px) {
+    justify-content: center;
+
     & .order__brands-item {
       margin: 20px;
     }
@@ -67,6 +75,10 @@
     font-weight: bold;
     padding-left: 20px;
     letter-spacing: 3px;
+
+    @include media-tablet {
+      padding-left: 0.2em;
+    }
   }
 
   & .order__slogan-center {
@@ -79,6 +91,19 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 30px;
+
+    @include media-tablet {
+      padding-left: 0.2em;
+    }
+  }
+
+  @include media-tablet {
+    font-size: 18px;
+    line-height: 1.8;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-left: 0;
   }
 }
 
@@ -113,6 +138,12 @@
     &::after {
       display: none;
     }
+  }
+
+  @include media-tablet {
+    max-width: 60%;
+    text-align: center;
+    padding-left: 0.2em;
   }
 }
 
