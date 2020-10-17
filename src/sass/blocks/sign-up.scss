@@ -80,6 +80,7 @@
     @include indent();
     border: 0;
     width: 48%;
+    margin-bottom: 5px;
   }
 
   & fieldset:nth-child(even) {
