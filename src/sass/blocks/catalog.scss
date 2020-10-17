@@ -117,7 +117,7 @@
 }
 
 .catalog__promo-link--1 {
-  background-image: url("../../img/item-1.jpg");
+  background-image: url("../img/item-1.jpg");
   padding: 0.5em;
 
   & .catalog__promo-text {
@@ -126,7 +126,7 @@
 }
 
 .catalog__promo-link--2 {
-  background-image: url("../../img/item-2.jpg");
+  background-image: url("../img/item-2.jpg");
 
   & .catalog__promo-text {
     margin-top: 50px;
@@ -142,7 +142,7 @@
 }
 
 .catalog__promo-link--4 {
-  background-image: url("../../img/item-4.jpg");
+  background-image: url("../img/item-4.jpg");
 
   & .catalog__promo-text {
     margin-top: 45px;
@@ -164,7 +164,7 @@
 }
 
 .catalog__promo-link--5 {
-  background-image: url("../../img/drop.png"), url("../../img/item-5.jpg");
+  background-image: url("../img/drop.png"), url("../img/item-5.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 
@@ -174,7 +174,7 @@
 }
 
 .catalog__promo-link--6 {
-  background-image: url("../../img/item-6.jpg");
+  background-image: url("../img/item-6.jpg");
 
   & .catalog__promo-text h3 {
     margin-top: -25px;
@@ -243,6 +243,8 @@
 }
 
 .catalog__promo-text-brand {
+  font-family: serif;
+
   @include indent();
   font-size: 22px;
   font-style: normal;

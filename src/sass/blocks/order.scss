@@ -8,7 +8,8 @@
   @include indent();
   width: 100%;
   max-width: 100%;
-  background-image: url("../../img/studio-bg2.jpg");
+  background-color: #b98348;
+  background-image: url("../img/studio-bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -96,7 +97,7 @@
   letter-spacing: 1.2px;
 
   &::after {
-    content: url("../../img/wave.png");
+    content: url("../img/wave.png");
     width: 80%;
     height: 14px;
     position: absolute;
@@ -122,7 +123,7 @@
 
   min-height: 154px;
   background-color: black;
-  background-image: url("../../img/Layer_44.png");
+  background-image: url("../img/Layer_44.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
