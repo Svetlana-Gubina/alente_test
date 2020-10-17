@@ -37,13 +37,14 @@
 }
 
 .presentation__title {
-  outline: 2px dashed yellow;
+  outline: 2px dashed yellowgreen;
   position: relative;
 
   @include indent();
   margin-left: 40px;
   padding: 0.2em;
-  margin-bottom: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
   width: 56%;
   max-width: 100%;
   color: #ffffff;
