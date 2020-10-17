@@ -37,11 +37,13 @@
 }
 
 .presentation__title {
+  outline: 2px dashed yellow;
   position: relative;
 
   @include indent();
   margin-left: 40px;
   padding: 0.2em;
+  margin-top: -5px;
   margin-bottom: 5px;
   width: 56%;
   max-width: 100%;
@@ -61,8 +63,8 @@
   &::after {
     content: "";
     position: absolute;
-    left: 35%;
-    width: 30%;
+    left: 36%;
+    width: 28%;
     height: 3px;
     background-color: #ffffff;
   }
