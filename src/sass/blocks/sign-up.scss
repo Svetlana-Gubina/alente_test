@@ -78,6 +78,7 @@
 
   & fieldset {
     outline: 2px dashed red;
+    margin-bottom: 2px;
 
     @include indent();
     border: 0;
@@ -173,8 +174,6 @@
 }
 
 .sign-up__form-container {
-  outline: 2px dashed darkblue;
-
   @include indent();
   position: relative;
   margin-bottom: 10px;
