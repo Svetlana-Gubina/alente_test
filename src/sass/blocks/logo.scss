@@ -2,11 +2,11 @@
   min-width: 190px;
 
   @include indent();
-  padding: 5px;
+  padding: 10px;
 
   @include flex();
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   @include media-custom(1380px) {
     margin-bottom: 20px;
@@ -19,18 +19,12 @@
   height: 38px;
 }
 
+.logo__letter {
+  width: 91px;
+  height: 32px;
+}
+
 .logo__text {
-  @include indent();
-  @include flex();
-  flex-direction: column;
-
-  font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  font-weight: 300;
+  font-size: 0;
 }
 
-.logo__span {
-  font-size: 12px;
-}

@@ -12,24 +12,11 @@
   @include flex();
 }
 
-.catalog .wrapper--inner {
-  width: 58%;
-
-  @include media-custom(1380px) {
-    width: 80%;
-  }
-
-  @include media-tablet {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 .catalog__list {
   justify-content: space-between;
-  padding: 3.8% 0;
-  padding-bottom: 3%;
-  padding-left: 60px;
+  padding: 3.7% 0;
+  padding-bottom: 2.8%;
+  padding-left: 65px;
 
   @include media-custom(900px) {
     padding-left: 10px;
@@ -134,7 +121,7 @@
   padding: 0.5em;
 
   & .catalog__promo-text {
-    margin-top: 55px;
+    margin-top: 50px;
   }
 }
 
@@ -142,7 +129,7 @@
   background-image: url("../../img/item-2.jpg");
 
   & .catalog__promo-text {
-    margin-top: 55px;
+    margin-top: 50px;
   }
 }
 
@@ -181,21 +168,40 @@
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 
-  & .catalog__promo-text {
-    // margin-top: -10px;
-  }
-
   & .catalog__promo-text h3 {
     margin-bottom: 8px;
   }
 }
 
 .catalog__promo-link--6 {
-  outline: 2px dashed rebeccapurple;
   background-image: url("../../img/item-6.jpg");
 
   & .catalog__promo-text h3 {
-    margin-top: -30px;
+    margin-top: -25px;
+    margin-bottom: 5px;
+  }
+
+  & .catalog__promo-text-sm {
+    position: relative;
+    padding: 1em 3.5em;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
   }
 }
 
@@ -219,12 +225,12 @@
 
 .catalog__promo-text--bg {
   padding: 5px 10px;
+  padding-top: 4px;
   background-color: #b98348;
   font-size: 16px;
   line-height: 1.2;
   font-weight: 700;
   font-style: normal;
-  letter-spacing: normal;
   text-align: center;
 }
 
@@ -244,6 +250,30 @@
   text-transform: uppercase;
   letter-spacing: 0.55px;
   line-height: normal;
+}
+
+.catalog__promo-text-dashed {
+  position: relative;
+  padding-right: 2em;
+  padding-left: 2em;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 1.5em;
+    height: 1px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    left: 2px;
+  }
+
+  &::after {
+    right: 2px;
+  }
 }
 
 .catalog__promo-text-sm {

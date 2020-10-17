@@ -18,16 +18,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Proxima Nova Extra Bold';
-  src: url('../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld.eot');
-  src: url('../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld.eot') format('embedded-opentype'),
-  url('../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld.woff') format('woff'),
-  url('../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   @include indent();
   @include flex();

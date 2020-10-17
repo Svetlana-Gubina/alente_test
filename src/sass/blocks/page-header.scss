@@ -6,7 +6,8 @@
 
 .page-header__container--top .wrapper--inner {
   padding: 10px 0;
-  padding-left: 65px;
+  padding-left: 90px;
+  padding-right: 30px;
 
   @include media-custom(1200px) {
     padding: 10px;
@@ -33,7 +34,7 @@
 
   &::after {
     top: 40%;
-    right: -30%;
+    right: -18%;
     width: 0.8em;
     height: 0.6em;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z' fill='%23c2c2c2'/%3E%3C/svg%3E%0A");
@@ -93,7 +94,8 @@
 }
 
 .page-header__container--bottom .wrapper--inner {
-  padding-left: 50px;
+  padding-left: 80px;
+  padding-right: 30px;
 
   @include media-custom(900px) {
     padding: 10px;
@@ -219,14 +221,12 @@
   position: relative;
   padding-left: 0.5em;
   color: #b98348;
-  // font-family: "PT Serif"
-  // text-decoration: none;
 
   &::before {
     content: "";
     position: absolute;
     top: 20%;
-    left: 0.5em;
+    left: 0;
     width: 1px;
     height: 1em;
     background-color: #b98348;

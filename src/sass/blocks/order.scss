@@ -22,17 +22,6 @@
   align-items: center;
 
   min-height: 411px;
-
-  width: 58%;
-
-  @include media-custom(1380px) {
-    width: 80%;
-  }
-
-  @include media-tablet {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 .order__brands-list {
@@ -55,15 +44,13 @@
 }
 
 .order__slogan {
-  outline: 2px dashed yellow;
-
   @include flex();
   flex-direction: column;
 
   @include indent();
   padding: 0.2em;
   margin-bottom: 45px;
-  max-width: 48%;
+  max-width: 60%;
   color: #ffffff;
   text-align: center;
 
@@ -71,50 +58,50 @@
   font-weight: 400;
   font-style: normal;
 
-  /* Text style for "Пошив кост" */
-  // font-family: Georgia;
-  // font-size: 28px;
-  // font-weight: 700;
-
   & .order__slogan-top {
+    font-family: "PT Serif", serif;
+    font-size: 28px;
     font-style: italic;
     font-weight: bold;
+    padding-left: 20px;
     letter-spacing: 3px;
-    margin-bottom: 8px;
   }
 
   & .order__slogan-center {
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   & .order__slogan-bottom {
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 30px;
   }
 }
 
 
 .order__text {
-  outline: 3px dashed yellowgreen;
   position: relative;
 
   @include indent();
   padding: 0.5em;
   padding-left: 2em;
+  padding-bottom: 40px;
   color: #ffffff;
   text-align: center;
-  // font-family: Georgia;
+  font-family: "PT Serif", serif;
   font-size: 20px;
   font-style: italic;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 
   &::after {
     content: url("../../img/wave.png");
-    width: 80%; // 210px;
+    width: 80%;
     height: 14px;
     position: absolute;
-    top: 120%;
-    left: 10%;
+    bottom: 5%;
+    left: 18%;
     background-color: transparent;
   }
 
