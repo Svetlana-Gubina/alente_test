@@ -6,12 +6,13 @@
 }
 
 .page-footer .wrapper--inner {
+  outline: 2px dashed yellow;
   position: relative;
 
   @include flex();
   justify-content: space-between;
   padding: 2.3%;
-  padding-left: 75px;
+  padding-left: 80px;
 
   &::after,
   &::before {
@@ -25,7 +26,7 @@
   }
 
   &::after {
-    left: 25%;
+    left: 30%;
   }
 
   &::before {

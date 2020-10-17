@@ -5,9 +5,10 @@
 }
 
 .page-header__container--top .wrapper--inner {
+  outline: 2px dashed yellow;
   padding: 10px 0;
   padding-left: 90px;
-  padding-right: 30px;
+  padding-right: 35px;
 
   @include media-custom(1200px) {
     padding: 10px;
@@ -52,7 +53,7 @@
 
   & a {
     display: block;
-    padding: 0.5em;
+    padding: 0.6em;
     padding-left: 1.5em;
     color: #1f1f1f;
     font-family: "Proxima Nova Semibold", "Arial", "Helvetica", sans-serif;
